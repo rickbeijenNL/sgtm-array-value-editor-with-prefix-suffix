@@ -1,5 +1,3 @@
-# sgtm-array-value-editor-with-prefix-suffix
-
 # Array Value Editor with Optional Prefix/Suffix
 
 This server-side GTM variable modifies values inside an array of objects (such as GA4 `items`).  
