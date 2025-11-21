@@ -7,6 +7,8 @@ You select which keys to modify and optionally apply a **prefix**, **suffix**, o
 - Applies transformations only to keys you define.
 - Returns a new array with modified values.
 
+Useful for normalizing item IDs, categories, or other attributes before they are sent to downstream systems.
+
 ---
 
 ## Examples
@@ -20,5 +22,11 @@ You select which keys to modify and optionally apply a **prefix**, **suffix**, o
 | **Replace (no placeholder)** | `fixed_value` | `123` | `fixed_value` |
 
 ---
+## Installation
+- Download the JSON file for the custom template from this repository.
+- Import it into your Google Tag Manager account.
+- Configure the fields.
 
-Useful for normalizing item IDs, categories, or other attributes before they are sent to downstream systems.
+## Reference
+Code inspired by the work of Jude Onyejekwe from [Dumbdata](https://dumbdata.co/) and his [GTM Item Array Transformation variable](https://github.com/Jude-Nwachukwu/gtm-item-array-transformation)
+ 
