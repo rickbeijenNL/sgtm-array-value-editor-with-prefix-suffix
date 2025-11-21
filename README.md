@@ -1,14 +1,24 @@
 # Array Value Editor with Optional Prefix/Suffix
 
-This server-side GTM variable modifies values inside an array of objects (such as GA4 `items`).  
-You define which keys to transform and provide a new value to apply.
+This server-side GTM variable transforms values inside an array of objects (e.g. GA4 `items`).  
+You select which keys to modify and optionally apply a **prefix**, **suffix**, or full **replacement** using `{{value}}`.
 
-- Supports **GA4 items** or a **custom array variable**.
-- For each selected key, you can:
-  - **Add a prefix**
-  - **Add a suffix**
-  - **Or fully replace the value** using a template like `SKU-{{value}}`.
-- Returns a new transformed array while keeping all other values intact.
+- Works with **GA4 Ecommerce items** or a **custom array variable**.
+- Applies transformations only to keys you define.
+- Returns a new array with modified values.
 
-Useful for standardizing item IDs, categories, or other item attributes before sending them to downstream platforms.
+---
 
+## Examples
+
+| Mode | Mapping Value | Original | Result |
+|------|---------------|----------|--------|
+| **Prefix only** | `abc_` | `123` | `abc_123` |
+| **Suffix only** | `_eu` | `123` | `123_eu` |
+| **Prefix + Suffix** | `x_` | `123` | `x_123x_` |
+| **Replace (template)** | `SKU-{{value}}-EU` | `123` | `SKU-123-EU` |
+| **Replace (no placeholder)** | `fixed_value` | `123` | `fixed_value` |
+
+---
+
+Useful for normalizing item IDs, categories, or other attributes before they are sent to downstream systems.
